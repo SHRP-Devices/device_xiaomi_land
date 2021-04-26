@@ -1,0 +1,15 @@
+diff --git a/FoxExtras/sbin/foxstart.sh b/FoxExtras/sbin/foxstart.sh
+index bf7ddb8..85d75ed 100755
+--- a/FoxExtras/sbin/foxstart.sh
++++ b/FoxExtras/sbin/foxstart.sh
+@@ -443,6 +443,10 @@ flashlight_Leds_config() {
+    echo "0" > /sys/class/leds/led:torch_1/max_brightness
+    echo "0" > /sys/class/leds/torch-light1/max_brightness
+    echo "0" > /sys/class/leds/led:flash_1/max_brightness
++
++   if [ "$(cat /sys/class/leds/flashlight/device/of_node/compatible)" = "qcom,leds-back-gpio-flash_ulysse" ]; then
++       echo "1" > /sys/class/leds/flashlight/max_brightness
++   fi
+ }
+ 
+ # start, and mark that we have started
