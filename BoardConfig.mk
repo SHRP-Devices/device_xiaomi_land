@@ -144,3 +144,21 @@ PLATFORM_VERSION := 16.1.0
 #OTA
 AB_OTA_UPDATER := false
 TARGET_OTA_ASSERT_DEVICE := land
+
+#shrp flags
+SHRP_PATH := device/xiaomi/land
+SHRP_MAINTAINER := MarvelMathesh
+SHRP_DEVICE_CODE := land
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /sdcard1
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
+SHRP_FLASH_MAX_BRIGHTNESS := 200
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+SHRP_OFFICIAL := true
+SHRP_DARK := true
+SHRP_EXPRESS := true
+SHRP_NO_SAR_AUTOMOUNT := true
+SHRP_REC_TYPE := Universal
+SHRP_DEVICE_TYPE := A_Only
